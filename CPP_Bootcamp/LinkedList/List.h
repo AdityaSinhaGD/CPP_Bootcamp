@@ -13,6 +13,7 @@ class List {
     
 public:
     virtual void insert(const tData& data) = 0;
+    virtual void push(const tData& data) = 0;
     virtual void remove(const tData& data) = 0;
     virtual void traverseList() const = 0;
     virtual int size() const = 0;

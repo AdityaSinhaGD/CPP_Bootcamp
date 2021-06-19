@@ -39,6 +39,24 @@ public:
         head = std::move(newNode);
     }
     
+    void push(const tData& data) override
+    {
+        std::unique_ptr<Node> newNode = std::make_unique<Node>(data);
+        if(head==nullptr)
+        {
+            head = std::move(newNode);
+            return;
+        }
+        
+        Node* currentNode = head.get();
+        while (currentNode->nextNode!=nullptr) {
+            currentNode = currentNode->nextNode.get();
+        }
+        
+        newNode->nextNode = std::move(currentNode->nextNode);
+        currentNode->nextNode = std::move(newNode);
+    }
+    
     void remove(const tData& data) override
     {
         //if list is empty

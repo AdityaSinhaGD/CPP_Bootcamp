@@ -118,10 +118,10 @@ int main(int argc, const char * argv[]) {
     }*/
     
     std::unique_ptr<List<int>> linkedList = std::make_unique<LinkedList<int>>();
-    linkedList->insert(5);
-    linkedList->insert(10);
-    linkedList->insert(15);
-    linkedList->insert(25);
+    linkedList->push(5);
+    linkedList->push(10);
+    linkedList->push(15);
+    linkedList->push(25);
     
     linkedList->remove(15);
     linkedList->traverseList();
