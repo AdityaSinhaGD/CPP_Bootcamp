@@ -10,46 +10,44 @@
 
 
 
-void MergeSort::Merge(std::vector<int>& leftSubVector, std::vector<int>& rightSubVector, std::vector<int>& result) {
+std::vector<int> MergeSort::Merge(const std::vector<int>& leftSubVector, const std::vector<int>& rightSubVector) {
     
     int lSubVIndex = 0;
     int rSubVIndex = 0;
-    int resultIndex = 0;
+    std::vector<int> result;
     
-    while (lSubVIndex<leftSubVector.size()&&rSubVIndex<rightSubVector.size()) {
-        if (leftSubVector[lSubVIndex]<=rightSubVector[rSubVIndex]) {
-            result[resultIndex] = leftSubVector[lSubVIndex];
+    while (lSubVIndex<leftSubVector.size() && rSubVIndex<rightSubVector.size()) {
+        if (leftSubVector[lSubVIndex] <= rightSubVector[rSubVIndex]) {
+            result.push_back(leftSubVector[lSubVIndex]);
             lSubVIndex++;
-        }else{
-            result[resultIndex] = rightSubVector[rSubVIndex];
+        }
+        else {
+            result.push_back(rightSubVector[rSubVIndex]);
             rSubVIndex++;
         }
-        resultIndex++;
         
     }
     
-    while (lSubVIndex<leftSubVector.size()) {
-        result[resultIndex] = leftSubVector[lSubVIndex];
+    while (lSubVIndex < leftSubVector.size()) {
+        result.push_back(leftSubVector[lSubVIndex]);
         lSubVIndex++;
-        resultIndex++;
     }
     
-    while (rSubVIndex<rightSubVector.size()) {
-        result[resultIndex] = rightSubVector[rSubVIndex];
+    while (rSubVIndex < rightSubVector.size()) {
+        result.push_back(rightSubVector[rSubVIndex]);
         rSubVIndex++;
-        resultIndex++;
-        
     }
     
+    return result;
 }
 
 
-void MergeSort::MergeSortImpl(std::vector<int>& vector) {
+std::vector<int> MergeSort::MergeSortImpl(const std::vector<int>& vector) {
     
     std::vector<int> result;
     
-    if (vector.size()<=1) {
-        return;
+    if (vector.size() <= 1) {
+        return vector;
     }
     
     int mid = static_cast<int>(vector.size())/2;
@@ -65,8 +63,10 @@ void MergeSort::MergeSortImpl(std::vector<int>& vector) {
         rightSubVector.push_back(vector[i]);
     }
     
-    MergeSortImpl(leftSubVector);
-    MergeSortImpl(rightSubVector);
-    Merge(leftSubVector, rightSubVector, vector);
+    leftSubVector = MergeSortImpl(leftSubVector);
+    rightSubVector = MergeSortImpl(rightSubVector);
+    result = Merge(leftSubVector, rightSubVector);
+    
+    return result;
     
 }

@@ -14,6 +14,9 @@
 #include "FibonacciMemoize.hpp"
 #include "Sorting/MergeSort.hpp"
 #include "LinkedList/LinkedList.h"
+#include "ADT/Stack.h"
+#include "ADT/StackLL.h"
+#include "ADT/Queue.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -109,22 +112,40 @@ int main(int argc, const char * argv[]) {
     //FibonacciMemoize fibonacci;
     //std::cout<<fibonacci.FibonacciResult(60)<<"\n";
     
-    /*std::vector<int> vect ={5,1,2,-9,30,300,-600,14};
+    /*std::vector<int> vect ={5,1,2,-9,30,300,-600,14,-9000};
     MergeSort mergeSrt;
-    mergeSrt.MergeSortImpl(vect);
+    vect = mergeSrt.MergeSortImpl(vect);
     
     for (int i=0; i<vect.size(); i++) {
         std::cout<<vect[i]<<"->";
     }*/
     
-    std::unique_ptr<List<int>> linkedList = std::make_unique<LinkedList<int>>();
+    /*std::unique_ptr<List<int>> linkedList = std::make_unique<LinkedList<int>>();
     linkedList->push(5);
     linkedList->push(10);
     linkedList->push(15);
     linkedList->push(25);
     
     linkedList->remove(15);
-    linkedList->traverseList();
+    linkedList->traverseList();*/
+    
+    /*StackLL<std::string> stack;
+    stack.push("Adam");
+    stack.push("Joe");
+    std::cout<<stack.size()<<"\n";
+    std::cout<<stack.pop()<<"\n";
+    std::cout<<stack.size()<<"\n";
+    std::cout<<stack.pop()<<"\n";
+    std::cout<<stack.size()<<"\n";*/
+    
+    Queue<std::string> queue;
+    queue.enqueue("Ada");
+    queue.enqueue("Wong");
+    std::cout<<queue.size()<<"\n";
+    std::cout<<queue.dequeue()<<"\n";
+    std::cout<<queue.size()<<"\n";
+    std::cout<<queue.dequeue()<<"\n";
+    std::cout<<queue.size()<<"\n";
 
     
     return 0;

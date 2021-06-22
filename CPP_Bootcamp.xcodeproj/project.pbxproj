@@ -39,6 +39,9 @@
 		612E4683266EA1CE000075EB /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		612E46872670A8D0000075EB /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		612E46882670A9F4000075EB /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		619A8F242681CBEC00C42078 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		619A8F262681D84F00C42078 /* StackLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackLL.h; sourceTree = "<group>"; };
+		619A8F282681E02500C42078 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		612E466C266859B7000075EB /* CPP_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				619A8F232681CBC500C42078 /* ADT */,
 				612E46862670A8B8000075EB /* LinkedList */,
 				612E4681266EA1B1000075EB /* Sorting */,
 				612E466D266859B7000075EB /* main.cpp */,
@@ -100,6 +104,16 @@
 				612E46882670A9F4000075EB /* LinkedList.h */,
 			);
 			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		619A8F232681CBC500C42078 /* ADT */ = {
+			isa = PBXGroup;
+			children = (
+				619A8F242681CBEC00C42078 /* Stack.h */,
+				619A8F262681D84F00C42078 /* StackLL.h */,
+				619A8F282681E02500C42078 /* Queue.h */,
+			);
+			path = ADT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,8 +16,8 @@ class MergeSort {
     
     
 public:
-    void MergeSortImpl(std::vector<int>& vector);
-    void Merge(std::vector<int>& leftSubVector, std::vector<int>& rightSubVector, std::vector<int>& result);
+    std::vector<int> MergeSortImpl(const std::vector<int>& vector);
+    std::vector<int> Merge(const std::vector<int>& leftSubVector, const std::vector<int>& rightSubVector);
 };
 
 #endif /* MergeSort_hpp */
