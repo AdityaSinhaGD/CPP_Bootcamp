@@ -27,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61155A8F268C6E65003D6ABE /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		61155A90268C6E86003D6ABE /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		612E466A266859B7000075EB /* CPP_Bootcamp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPP_Bootcamp; sourceTree = BUILT_PRODUCTS_DIR; };
 		612E466D266859B7000075EB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		612E4675266A09AD000075EB /* NQueens.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NQueens.cpp; sourceTree = "<group>"; };
@@ -55,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61155A8E268C6E4B003D6ABE /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				61155A8F268C6E65003D6ABE /* BinarySearchTree.h */,
+				61155A90268C6E86003D6ABE /* Tree.h */,
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
 		612E4661266859B7000075EB = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +85,7 @@
 		612E466C266859B7000075EB /* CPP_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				61155A8E268C6E4B003D6ABE /* Trees */,
 				619A8F232681CBC500C42078 /* ADT */,
 				612E46862670A8B8000075EB /* LinkedList */,
 				612E4681266EA1B1000075EB /* Sorting */,

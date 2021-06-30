@@ -17,6 +17,7 @@
 #include "ADT/Stack.h"
 #include "ADT/StackLL.h"
 #include "ADT/Queue.h"
+#include "Trees/BinarySearchTree.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -138,15 +139,26 @@ int main(int argc, const char * argv[]) {
     std::cout<<stack.pop()<<"\n";
     std::cout<<stack.size()<<"\n";*/
     
-    Queue<std::string> queue;
+    /*Queue<std::string> queue;
     queue.enqueue("Ada");
     queue.enqueue("Wong");
     std::cout<<queue.size()<<"\n";
     std::cout<<queue.dequeue()<<"\n";
     std::cout<<queue.size()<<"\n";
     std::cout<<queue.dequeue()<<"\n";
-    std::cout<<queue.size()<<"\n";
+    std::cout<<queue.size()<<"\n";*/
+    
+    std::unique_ptr<Tree<int>> bst = std::make_unique<BinarySearchTree<int>>();
+    bst->insert(12);
+    bst->insert(4);
+    bst->insert(20);
+    bst->insert(1);
+    bst->insert(7);
+    bst->insert(23);
+    bst->insert(5);
 
+    
+    std::cout<<bst->getMinValue()<<"\n"<<bst->getMaxValue()<<"\n";
     
     return 0;
 }
