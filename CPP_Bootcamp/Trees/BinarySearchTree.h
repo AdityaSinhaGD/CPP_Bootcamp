@@ -99,7 +99,17 @@ public:
     }
     
     void traversal() const override {
-        
+        inOrderTraversal(root.get());
+    }
+    
+    void inOrderTraversal(Node* node) const {
+        if (node->left) {
+            inOrderTraversal(node->left.get());
+        }
+        std::cout<<node->data<<"-->";
+        if (node->right) {
+            inOrderTraversal(node->right.get());
+        }
     }
     
 };

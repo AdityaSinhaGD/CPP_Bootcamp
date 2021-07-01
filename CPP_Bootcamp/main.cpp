@@ -157,8 +157,8 @@ int main(int argc, const char * argv[]) {
     bst->insert(23);
     bst->insert(5);
 
-    
     std::cout<<bst->getMinValue()<<"\n"<<bst->getMaxValue()<<"\n";
+    bst->traversal();
     
     return 0;
 }
