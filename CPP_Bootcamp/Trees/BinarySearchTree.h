@@ -95,7 +95,63 @@ public:
     }
     
     void remove(const t_Data& data) override {
-        
+        if (root == nullptr) {
+            return;
+        }
+        remove(data, root);
+    }
+    
+    void remove(const t_Data& data, std::unique_ptr<Node>& node) {
+        if (data < node->data) {
+            if (node->left) {
+                remove(data, node->left);
+            }
+        }
+        else if (data > node->data) {
+            if (node->right) {
+                remove(data, node->right);
+            }
+        }
+        else {
+            if (node->left == nullptr && node->right == nullptr) {
+                node.reset();
+                return;
+            }
+            else if (node->left == nullptr) {
+                std::unique_ptr<Node> temp = std::move(node->right);
+                node.reset();
+                node = std::move(temp);
+                return;
+            }
+            else if (node->right == nullptr) {
+                std::unique_ptr<Node> temp = std::move(node->left);
+                node.reset();
+                node = std::move(temp);
+                return;
+            }
+            
+            std::unique_ptr<Node> temp = detachRightMost(node->left);
+            temp->right = std::move(node->right);
+            std::unique_ptr<Node>& tempLeftMost = getLeftMost(temp);
+            tempLeftMost->left = std::move(node->left);
+            node.reset();
+            node = std::move(temp);
+            
+        }
+    }
+    
+    std::unique_ptr<Node> detachRightMost(std::unique_ptr<Node>& node) {
+        if (node->right) {
+            return detachRightMost(node->right);
+        }
+        return std::move(node);
+    }
+    
+    std::unique_ptr<Node>& getLeftMost(std::unique_ptr<Node>& node) {
+        if (node->left) {
+            return getLeftMost(node->left);
+        }
+        return node;
     }
     
     void traversal() const override {
