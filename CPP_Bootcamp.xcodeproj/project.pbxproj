@@ -12,6 +12,7 @@
 		612E467B266ACACE000075EB /* GraphColoring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E4679266ACACE000075EB /* GraphColoring.cpp */; };
 		612E467F266B484F000075EB /* FibonacciMemoize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E467D266B484F000075EB /* FibonacciMemoize.cpp */; };
 		612E4684266EA1CE000075EB /* MergeSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E4682266EA1CE000075EB /* MergeSort.cpp */; };
+		6155A1E9269D5A6300FB3574 /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6155A1E7269D5A6300FB3574 /* Heap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		612E4683266EA1CE000075EB /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		612E46872670A8D0000075EB /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		612E46882670A9F4000075EB /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		6155A1E7269D5A6300FB3574 /* Heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
+		6155A1E8269D5A6300FB3574 /* Heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		619A8F242681CBEC00C42078 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		619A8F262681D84F00C42078 /* StackLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackLL.h; sourceTree = "<group>"; };
 		619A8F282681E02500C42078 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				619A8F242681CBEC00C42078 /* Stack.h */,
 				619A8F262681D84F00C42078 /* StackLL.h */,
 				619A8F282681E02500C42078 /* Queue.h */,
+				6155A1E7269D5A6300FB3574 /* Heap.cpp */,
+				6155A1E8269D5A6300FB3574 /* Heap.hpp */,
 			);
 			path = ADT;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				612E466E266859B7000075EB /* main.cpp in Sources */,
 				612E467F266B484F000075EB /* FibonacciMemoize.cpp in Sources */,
 				612E467B266ACACE000075EB /* GraphColoring.cpp in Sources */,
+				6155A1E9269D5A6300FB3574 /* Heap.cpp in Sources */,
 				612E4684266EA1CE000075EB /* MergeSort.cpp in Sources */,
 				612E4677266A09AD000075EB /* NQueens.cpp in Sources */,
 			);

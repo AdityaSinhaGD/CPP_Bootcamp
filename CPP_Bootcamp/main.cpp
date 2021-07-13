@@ -18,6 +18,7 @@
 #include "ADT/StackLL.h"
 #include "ADT/Queue.h"
 #include "Trees/BinarySearchTree.h"
+#include "ADT/Heap.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -148,7 +149,7 @@ int main(int argc, const char * argv[]) {
     std::cout<<queue.dequeue()<<"\n";
     std::cout<<queue.size()<<"\n";*/
     
-    std::unique_ptr<Tree<int>> bst = std::make_unique<BinarySearchTree<int>>();
+    /*std::unique_ptr<Tree<int>> bst = std::make_unique<BinarySearchTree<int>>();
     bst->insert(12);
     bst->insert(4);
     bst->insert(20);
@@ -160,7 +161,16 @@ int main(int argc, const char * argv[]) {
     bst->remove(4);
 
     std::cout<<bst->getMinValue()<<"\n"<<bst->getMaxValue()<<"\n";
-    bst->traversal();
+    bst->traversal();*/
+    
+    Heap heap{};
+    heap.insert(8);
+    heap.insert(20);
+    heap.insert(300);
+    heap.insert(-2);
+    heap.insert(0);
+    heap.insert(321);
+    heap.heapSort();
     
     return 0;
 }
