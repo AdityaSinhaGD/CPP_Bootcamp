@@ -19,6 +19,7 @@
 #include "ADT/Queue.h"
 #include "Trees/BinarySearchTree.h"
 #include "ADT/Heap.hpp"
+#include "HashTable/HashTable.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -163,14 +164,22 @@ int main(int argc, const char * argv[]) {
     std::cout<<bst->getMinValue()<<"\n"<<bst->getMaxValue()<<"\n";
     bst->traversal();*/
     
-    Heap heap{};
+    /*Heap heap{};
     heap.insert(8);
     heap.insert(20);
     heap.insert(300);
     heap.insert(-2);
     heap.insert(0);
     heap.insert(321);
-    heap.heapSort();
+    heap.heapSort();*/
+    
+    HashTable hashTable{};
+    hashTable.put(1, 22);
+    hashTable.put(11, 10);
+    hashTable.put(21, 100);
+    hashTable.put(1, 3);
+    
+    std::cout<<hashTable.get(1)<< " "<<hashTable.get(21)<< "\n";
     
     return 0;
 }
