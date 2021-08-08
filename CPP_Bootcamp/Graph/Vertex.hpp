@@ -27,7 +27,7 @@ public:
     void setVisited(bool visited);
     const std::vector<Vertex*>& getNeighbourList() const;
     void addNeighbour(Vertex* neighbour);
-    
+    friend std::ostream& operator<<(std::ostream& os, const Vertex& vertex);
     
 };
 

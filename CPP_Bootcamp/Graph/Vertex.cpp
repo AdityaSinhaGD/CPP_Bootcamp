@@ -40,7 +40,7 @@ void Vertex::addNeighbour(Vertex *neighbour) {
 
 std::ostream& operator<<(std::ostream& strm, const Vertex& vertex) {
     
-    strm << vertex.getName();
+    strm << vertex.name;
     
     return strm;
     

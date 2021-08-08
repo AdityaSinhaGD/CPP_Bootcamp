@@ -21,7 +21,7 @@ void BreadthFirstSearch::operator()(std::shared_ptr<Vertex> root) const {
         Vertex* currentVertex = vertexQueue.front();
         vertexQueue.pop();
         
-        std::cout<<"Visited Node:"<<currentVertex->getName()<<"\n";
+        std::cout<<"Visited Node:"<<*currentVertex<<"\n";
         
         std::vector<Vertex*> neighbours = currentVertex->getNeighbourList();
         
