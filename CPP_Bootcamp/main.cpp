@@ -20,6 +20,7 @@
 #include "Trees/BinarySearchTree.h"
 #include "ADT/Heap.hpp"
 #include "HashTable/HashTable.hpp"
+#include "Graph/BreadthFirstSearch.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -173,13 +174,36 @@ int main(int argc, const char * argv[]) {
     heap.insert(321);
     heap.heapSort();*/
     
-    HashTable hashTable{};
+    /*HashTable hashTable{};
     hashTable.put(1, 22);
     hashTable.put(11, 10);
     hashTable.put(21, 100);
     hashTable.put(1, 3);
     
-    std::cout<<hashTable.get(1)<< " "<<hashTable.get(21)<< "\n";
+    std::cout<<hashTable.get(1)<< " "<<hashTable.get(21)<< "\n";*/
+    
+    BreadthFirstSearch bfs;
+    std::shared_ptr<Vertex> vertex1 = std::make_shared<Vertex>("A");
+    std::shared_ptr<Vertex> vertex2 = std::make_shared<Vertex>("B");
+    std::shared_ptr<Vertex> vertex3 = std::make_shared<Vertex>("C");
+    std::shared_ptr<Vertex> vertex4 = std::make_shared<Vertex>("D");
+    std::shared_ptr<Vertex> vertex5 = std::make_shared<Vertex>("E");
+    std::shared_ptr<Vertex> vertex6 = std::make_shared<Vertex>("F");
+    std::shared_ptr<Vertex> vertex7 = std::make_shared<Vertex>("G");
+    std::shared_ptr<Vertex> vertex8 = std::make_shared<Vertex>("H");
+    
+    vertex1->addNeighbour(vertex2.get());
+    vertex1->addNeighbour(vertex6.get());
+    vertex1->addNeighbour(vertex7.get());
+    
+    vertex7->addNeighbour(vertex8.get());
+    
+    vertex2->addNeighbour(vertex3.get());
+    vertex2->addNeighbour(vertex4.get());
+    
+    vertex4->addNeighbour(vertex5.get());
+    
+    bfs(vertex1);
     
     return 0;
 }
