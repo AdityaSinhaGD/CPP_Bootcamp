@@ -21,6 +21,7 @@
 #include "ADT/Heap.hpp"
 #include "HashTable/HashTable.hpp"
 #include "Graph/BreadthFirstSearch.hpp"
+#include "Graph/DepthFirstSearch.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -182,7 +183,7 @@ int main(int argc, const char * argv[]) {
     
     std::cout<<hashTable.get(1)<< " "<<hashTable.get(21)<< "\n";*/
     
-    BreadthFirstSearch bfs;
+    /*BreadthFirstSearch bfs;
     std::shared_ptr<Vertex> vertex1 = std::make_shared<Vertex>("A");
     std::shared_ptr<Vertex> vertex2 = std::make_shared<Vertex>("B");
     std::shared_ptr<Vertex> vertex3 = std::make_shared<Vertex>("C");
@@ -203,7 +204,29 @@ int main(int argc, const char * argv[]) {
     
     vertex4->addNeighbour(vertex5.get());
     
-    bfs(vertex1);
+    bfs(vertex1);*/
+    
+    std::vector<std::shared_ptr<Vertex>> graph;
+    graph.resize(8);
+    graph[0] = std::make_shared<Vertex>("A");
+    graph[1] = std::make_shared<Vertex>("B");
+    graph[2] = std::make_shared<Vertex>("C");
+    graph[3] = std::make_shared<Vertex>("D");
+    graph[4] = std::make_shared<Vertex>("E");
+    graph[5] = std::make_shared<Vertex>("F");
+    graph[6] = std::make_shared<Vertex>("G");
+    graph[7] = std::make_shared<Vertex>("H");
+    
+    graph[0]->addNeighbour(graph[1].get());
+    graph[0]->addNeighbour(graph[4].get());
+    graph[0]->addNeighbour(graph[5].get());
+    graph[6]->addNeighbour(graph[7].get());
+    graph[1]->addNeighbour(graph[2].get());
+    graph[1]->addNeighbour(graph[3].get());
+    graph[3]->addNeighbour(graph[4].get());
+    
+    DepthFirstSearch dfs(graph);
+    dfs();
     
     return 0;
 }
