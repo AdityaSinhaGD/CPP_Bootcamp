@@ -23,6 +23,7 @@
 #include "Graph/BreadthFirstSearch.hpp"
 #include "Graph/DepthFirstSearch.hpp"
 #include "Dijkstra/DijkstraAlgorithm.hpp"
+#include "BellmanFord/BellmanFord.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -229,7 +230,7 @@ int main(int argc, const char * argv[]) {
     DepthFirstSearch dfs(graph);
     dfs();*/
     
-    std::vector<std::shared_ptr<DVertex>> graph;
+    /*std::vector<std::shared_ptr<DVertex>> graph;
     graph.push_back(std::make_shared<DVertex>("A"));
     graph.push_back(std::make_shared<DVertex>("B"));
     graph.push_back(std::make_shared<DVertex>("C"));
@@ -279,7 +280,38 @@ int main(int argc, const char * argv[]) {
     auto path = sp.getShortestPath(graph[6]);
     for (DVertex* vertex : path) {
         std::cout<< *vertex << ' ';
-    }
+    }*/
+    
+    std::vector<BVertex> vertexList;
+    vertexList.push_back(BVertex("A"));
+    vertexList.push_back(BVertex("B"));
+    vertexList.push_back(BVertex("C"));
+    vertexList.push_back(BVertex("D"));
+    vertexList.push_back(BVertex("E"));
+    vertexList.push_back(BVertex("F"));
+    vertexList.push_back(BVertex("G"));
+    vertexList.push_back(BVertex("H"));
+    
+    std::vector<BEdge> edgeList;
+    edgeList.push_back(BEdge(&vertexList[0], &vertexList[1], 5));
+    edgeList.push_back(BEdge(&vertexList[0], &vertexList[4], 9));
+    edgeList.push_back(BEdge(&vertexList[0], &vertexList[7], 8));
+    edgeList.push_back(BEdge(&vertexList[1], &vertexList[3], 12));
+    edgeList.push_back(BEdge(&vertexList[1], &vertexList[4], 15));
+    edgeList.push_back(BEdge(&vertexList[1], &vertexList[7], 4));
+    edgeList.push_back(BEdge(&vertexList[2], &vertexList[3], 3));
+    edgeList.push_back(BEdge(&vertexList[2], &vertexList[6], 11));
+    edgeList.push_back(BEdge(&vertexList[3], &vertexList[6], 9));
+    edgeList.push_back(BEdge(&vertexList[4], &vertexList[5], 4));
+    edgeList.push_back(BEdge(&vertexList[4], &vertexList[6], 20));
+    edgeList.push_back(BEdge(&vertexList[4], &vertexList[7], 5));
+    edgeList.push_back(BEdge(&vertexList[5], &vertexList[2], 1));
+    edgeList.push_back(BEdge(&vertexList[5], &vertexList[6], 13));
+    edgeList.push_back(BEdge(&vertexList[7], &vertexList[2], 7));
+    edgeList.push_back(BEdge(&vertexList[7], &vertexList[5], 6));
+    
+    BellmanFord bellmanFordAlgo = BellmanFord(vertexList, edgeList);
+    bellmanFordAlgo(0, 6);
     
     return 0;
 }

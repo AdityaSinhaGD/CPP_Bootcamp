@@ -18,6 +18,9 @@
 		6147C02A26C60A5900993634 /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C02826C60A5900993634 /* Edge.cpp */; };
 		6147C02D26C6134300993634 /* DVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C02B26C6134300993634 /* DVertex.cpp */; };
 		6147C03026C6193200993634 /* DijkstraAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C02E26C6193200993634 /* DijkstraAlgorithm.cpp */; };
+		6147C03426C6F99F00993634 /* BVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C03226C6F99F00993634 /* BVertex.cpp */; };
+		6147C03726C6F9FE00993634 /* BEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C03526C6F9FE00993634 /* BEdge.cpp */; };
+		6147C03A26C6FF6A00993634 /* BellmanFord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C03826C6FF6A00993634 /* BellmanFord.cpp */; };
 		6155A1E9269D5A6300FB3574 /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6155A1E7269D5A6300FB3574 /* Heap.cpp */; };
 		61AB36C526AA9BDA00D19489 /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36C326AA9BDA00D19489 /* HashTable.cpp */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,12 @@
 		6147C02C26C6134300993634 /* DVertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DVertex.hpp; sourceTree = "<group>"; };
 		6147C02E26C6193200993634 /* DijkstraAlgorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DijkstraAlgorithm.cpp; sourceTree = "<group>"; };
 		6147C02F26C6193200993634 /* DijkstraAlgorithm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DijkstraAlgorithm.hpp; sourceTree = "<group>"; };
+		6147C03226C6F99F00993634 /* BVertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BVertex.cpp; sourceTree = "<group>"; };
+		6147C03326C6F99F00993634 /* BVertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BVertex.hpp; sourceTree = "<group>"; };
+		6147C03526C6F9FE00993634 /* BEdge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BEdge.cpp; sourceTree = "<group>"; };
+		6147C03626C6F9FE00993634 /* BEdge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BEdge.hpp; sourceTree = "<group>"; };
+		6147C03826C6FF6A00993634 /* BellmanFord.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BellmanFord.cpp; sourceTree = "<group>"; };
+		6147C03926C6FF6A00993634 /* BellmanFord.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BellmanFord.hpp; sourceTree = "<group>"; };
 		6155A1E7269D5A6300FB3574 /* Heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
 		6155A1E8269D5A6300FB3574 /* Heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		619A8F242681CBEC00C42078 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		612E466C266859B7000075EB /* CPP_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				6147C03126C6F98000993634 /* BellmanFord */,
 				6147C02426C60A2D00993634 /* Dijkstra */,
 				6147C01A26BF6D4F00993634 /* Graph */,
 				61AB36C226AA9BB900D19489 /* HashTable */,
@@ -169,6 +179,19 @@
 				6147C02F26C6193200993634 /* DijkstraAlgorithm.hpp */,
 			);
 			path = Dijkstra;
+			sourceTree = "<group>";
+		};
+		6147C03126C6F98000993634 /* BellmanFord */ = {
+			isa = PBXGroup;
+			children = (
+				6147C03226C6F99F00993634 /* BVertex.cpp */,
+				6147C03326C6F99F00993634 /* BVertex.hpp */,
+				6147C03526C6F9FE00993634 /* BEdge.cpp */,
+				6147C03626C6F9FE00993634 /* BEdge.hpp */,
+				6147C03826C6FF6A00993634 /* BellmanFord.cpp */,
+				6147C03926C6FF6A00993634 /* BellmanFord.hpp */,
+			);
+			path = BellmanFord;
 			sourceTree = "<group>";
 		};
 		619A8F232681CBC500C42078 /* ADT */ = {
@@ -254,7 +277,10 @@
 				612E467B266ACACE000075EB /* GraphColoring.cpp in Sources */,
 				6155A1E9269D5A6300FB3574 /* Heap.cpp in Sources */,
 				612E4684266EA1CE000075EB /* MergeSort.cpp in Sources */,
+				6147C03A26C6FF6A00993634 /* BellmanFord.cpp in Sources */,
+				6147C03426C6F99F00993634 /* BVertex.cpp in Sources */,
 				6147C02A26C60A5900993634 /* Edge.cpp in Sources */,
+				6147C03726C6F9FE00993634 /* BEdge.cpp in Sources */,
 				6147C03026C6193200993634 /* DijkstraAlgorithm.cpp in Sources */,
 				6147C02D26C6134300993634 /* DVertex.cpp in Sources */,
 				6147C02026BF748100993634 /* BreadthFirstSearch.cpp in Sources */,
