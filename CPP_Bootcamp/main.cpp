@@ -22,6 +22,7 @@
 #include "HashTable/HashTable.hpp"
 #include "Graph/BreadthFirstSearch.hpp"
 #include "Graph/DepthFirstSearch.hpp"
+#include "Dijkstra/DijkstraAlgorithm.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -206,7 +207,7 @@ int main(int argc, const char * argv[]) {
     
     bfs(vertex1);*/
     
-    std::vector<std::shared_ptr<Vertex>> graph;
+    /*std::vector<std::shared_ptr<Vertex>> graph;
     graph.resize(8);
     graph[0] = std::make_shared<Vertex>("A");
     graph[1] = std::make_shared<Vertex>("B");
@@ -226,7 +227,59 @@ int main(int argc, const char * argv[]) {
     graph[3]->addNeighbour(graph[4].get());
     
     DepthFirstSearch dfs(graph);
-    dfs();
+    dfs();*/
+    
+    std::vector<std::shared_ptr<DVertex>> graph;
+    graph.push_back(std::make_shared<DVertex>("A"));
+    graph.push_back(std::make_shared<DVertex>("B"));
+    graph.push_back(std::make_shared<DVertex>("C"));
+    graph.push_back(std::make_shared<DVertex>("D"));
+    graph.push_back(std::make_shared<DVertex>("E"));
+    graph.push_back(std::make_shared<DVertex>("F"));
+    graph.push_back(std::make_shared<DVertex>("G"));
+    graph.push_back(std::make_shared<DVertex>("H"));
+    
+    std::shared_ptr<Edge> edge01 = std::make_shared<Edge>(5, graph[0], graph[1]);
+    std::shared_ptr<Edge> edge04 = std::make_shared<Edge>(9, graph[0], graph[4]);
+    std::shared_ptr<Edge> edge07 = std::make_shared<Edge>(8, graph[0], graph[7]);
+    std::shared_ptr<Edge> edge13 = std::make_shared<Edge>(12, graph[1], graph[3]);
+    std::shared_ptr<Edge> edge14 = std::make_shared<Edge>(15, graph[1], graph[4]);
+    std::shared_ptr<Edge> edge17 = std::make_shared<Edge>(4, graph[1], graph[7]);
+    std::shared_ptr<Edge> edge23 = std::make_shared<Edge>(3, graph[2], graph[3]);
+    std::shared_ptr<Edge> edge26 = std::make_shared<Edge>(11, graph[2], graph[6]);
+    std::shared_ptr<Edge> edge36 = std::make_shared<Edge>(9, graph[3], graph[6]);
+    std::shared_ptr<Edge> edge45 = std::make_shared<Edge>(4, graph[4], graph[5]);
+    std::shared_ptr<Edge> edge46 = std::make_shared<Edge>(20, graph[4], graph[6]);
+    std::shared_ptr<Edge> edge47 = std::make_shared<Edge>(5, graph[4], graph[7]);
+    std::shared_ptr<Edge> edge52 = std::make_shared<Edge>(1, graph[5], graph[2]);
+    std::shared_ptr<Edge> edge56 = std::make_shared<Edge>(13, graph[5], graph[6]);
+    std::shared_ptr<Edge> edge72 = std::make_shared<Edge>(7, graph[7], graph[2]);
+    std::shared_ptr<Edge> edge75 = std::make_shared<Edge>(6, graph[7], graph[5]);
+    
+    graph[0]->addNeighbour(edge01.get());
+    graph[0]->addNeighbour(edge04.get());
+    graph[0]->addNeighbour(edge07.get());
+    graph[1]->addNeighbour(edge13.get());
+    graph[1]->addNeighbour(edge14.get());
+    graph[1]->addNeighbour(edge17.get());
+    graph[2]->addNeighbour(edge23.get());
+    graph[2]->addNeighbour(edge26.get());
+    graph[3]->addNeighbour(edge36.get());
+    graph[4]->addNeighbour(edge45.get());
+    graph[4]->addNeighbour(edge46.get());
+    graph[4]->addNeighbour(edge47.get());
+    graph[5]->addNeighbour(edge52.get());
+    graph[5]->addNeighbour(edge56.get());
+    graph[7]->addNeighbour(edge72.get());
+    graph[7]->addNeighbour(edge75.get());
+    
+    DijkstraAlgorithm sp;
+    sp.computePaths(graph[0]);
+    
+    auto path = sp.getShortestPath(graph[6]);
+    for (DVertex* vertex : path) {
+        std::cout<< *vertex << ' ';
+    }
     
     return 0;
 }
