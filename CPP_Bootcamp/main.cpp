@@ -24,6 +24,7 @@
 #include "Graph/DepthFirstSearch.hpp"
 #include "Dijkstra/DijkstraAlgorithm.hpp"
 #include "BellmanFord/BellmanFord.hpp"
+#include "SubstringSearch/SubstringSearch.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -282,7 +283,7 @@ int main(int argc, const char * argv[]) {
         std::cout<< *vertex << ' ';
     }*/
     
-    std::vector<BVertex> vertexList;
+    /*std::vector<BVertex> vertexList;
     vertexList.push_back(BVertex("A"));
     vertexList.push_back(BVertex("B"));
     vertexList.push_back(BVertex("C"));
@@ -311,7 +312,12 @@ int main(int argc, const char * argv[]) {
     edgeList.push_back(BEdge(&vertexList[7], &vertexList[5], 6));
     
     BellmanFord bellmanFordAlgo = BellmanFord(vertexList, edgeList);
-    bellmanFordAlgo(0, 6);
+    bellmanFordAlgo(0, 6);*/
+    
+    SubstringSearch substringSearch;
+    char text[] = "abcabcertabcd";
+    char pattern[] = "abcd";
+    std::cout<<substringSearch.bruteForceSearch(pattern, text)<<std::endl;
     
     return 0;
 }

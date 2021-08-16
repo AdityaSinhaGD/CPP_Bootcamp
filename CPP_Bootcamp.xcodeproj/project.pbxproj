@@ -70,6 +70,7 @@
 		6147C03626C6F9FE00993634 /* BEdge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BEdge.hpp; sourceTree = "<group>"; };
 		6147C03826C6FF6A00993634 /* BellmanFord.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BellmanFord.cpp; sourceTree = "<group>"; };
 		6147C03926C6FF6A00993634 /* BellmanFord.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BellmanFord.hpp; sourceTree = "<group>"; };
+		6147C03D26CAEDF100993634 /* SubstringSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubstringSearch.h; sourceTree = "<group>"; };
 		6155A1E7269D5A6300FB3574 /* Heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
 		6155A1E8269D5A6300FB3574 /* Heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		619A8F242681CBEC00C42078 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		612E466C266859B7000075EB /* CPP_Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				6147C03B26CAED9800993634 /* SubstringSearch */,
 				6147C03126C6F98000993634 /* BellmanFord */,
 				6147C02426C60A2D00993634 /* Dijkstra */,
 				6147C01A26BF6D4F00993634 /* Graph */,
@@ -192,6 +194,14 @@
 				6147C03926C6FF6A00993634 /* BellmanFord.hpp */,
 			);
 			path = BellmanFord;
+			sourceTree = "<group>";
+		};
+		6147C03B26CAED9800993634 /* SubstringSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6147C03D26CAEDF100993634 /* SubstringSearch.h */,
+			);
+			path = SubstringSearch;
 			sourceTree = "<group>";
 		};
 		619A8F232681CBC500C42078 /* ADT */ = {
