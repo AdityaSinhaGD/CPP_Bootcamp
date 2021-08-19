@@ -12,6 +12,7 @@
 		612E467B266ACACE000075EB /* GraphColoring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E4679266ACACE000075EB /* GraphColoring.cpp */; };
 		612E467F266B484F000075EB /* FibonacciMemoize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E467D266B484F000075EB /* FibonacciMemoize.cpp */; };
 		612E4684266EA1CE000075EB /* MergeSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 612E4682266EA1CE000075EB /* MergeSort.cpp */; };
+		6147805A26CEF26400289759 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147805826CEF26400289759 /* QuickSort.cpp */; };
 		6147C01D26BF6F7400993634 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C01B26BF6F7400993634 /* Vertex.cpp */; };
 		6147C02026BF748100993634 /* BreadthFirstSearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C01E26BF748100993634 /* BreadthFirstSearch.cpp */; };
 		6147C02326BFCE1000993634 /* DepthFirstSearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6147C02126BFCE1000993634 /* DepthFirstSearch.cpp */; };
@@ -52,6 +53,8 @@
 		612E4683266EA1CE000075EB /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		612E46872670A8D0000075EB /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		612E46882670A9F4000075EB /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		6147805826CEF26400289759 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
+		6147805926CEF26400289759 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		6147C01B26BF6F7400993634 /* Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		6147C01C26BF6F7400993634 /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
 		6147C01E26BF748100993634 /* BreadthFirstSearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BreadthFirstSearch.cpp; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 			children = (
 				612E4682266EA1CE000075EB /* MergeSort.cpp */,
 				612E4683266EA1CE000075EB /* MergeSort.hpp */,
+				6147805826CEF26400289759 /* QuickSort.cpp */,
+				6147805926CEF26400289759 /* QuickSort.hpp */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				6147C03426C6F99F00993634 /* BVertex.cpp in Sources */,
 				6147C02A26C60A5900993634 /* Edge.cpp in Sources */,
 				6147C03726C6F9FE00993634 /* BEdge.cpp in Sources */,
+				6147805A26CEF26400289759 /* QuickSort.cpp in Sources */,
 				6147C03026C6193200993634 /* DijkstraAlgorithm.cpp in Sources */,
 				6147C02D26C6134300993634 /* DVertex.cpp in Sources */,
 				6147C02026BF748100993634 /* BreadthFirstSearch.cpp in Sources */,

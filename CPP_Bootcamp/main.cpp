@@ -25,6 +25,7 @@
 #include "Dijkstra/DijkstraAlgorithm.hpp"
 #include "BellmanFord/BellmanFord.hpp"
 #include "SubstringSearch/SubstringSearch.h"
+#include "Sorting/QuickSort.hpp"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -314,10 +315,17 @@ int main(int argc, const char * argv[]) {
     BellmanFord bellmanFordAlgo = BellmanFord(vertexList, edgeList);
     bellmanFordAlgo(0, 6);*/
     
-    SubstringSearch substringSearch;
+    /*SubstringSearch substringSearch;
     char text[] = "abcabcertabcd";
     char pattern[] = "abcd";
-    std::cout<<substringSearch.bruteForceSearch(pattern, text)<<std::endl;
+    std::cout<<substringSearch.bruteForceSearch(pattern, text)<<std::endl;*/
+    
+    QuickSort quickSort;
+    std::vector<int> arr = {12,4,123,55,1,0,-9,-12,1};
+    quickSort.QuickSortRun(arr);
+    for (size_t i = 0; i < arr.size(); i++) {
+        std::cout<<arr[i]<<"\n";
+    }
     
     return 0;
 }
