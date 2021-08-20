@@ -26,6 +26,7 @@
 #include "BellmanFord/BellmanFord.hpp"
 #include "SubstringSearch/SubstringSearch.h"
 #include "Sorting/QuickSort.hpp"
+#include "Sorting/InsertionSort.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -321,8 +322,10 @@ int main(int argc, const char * argv[]) {
     std::cout<<substringSearch.bruteForceSearch(pattern, text)<<std::endl;*/
     
     QuickSort quickSort;
+    InsertionSort insertionSrt;
     std::vector<int> arr = {12,4,123,55,1,0,-9,-12,1};
-    quickSort.QuickSortRun(arr);
+    insertionSrt.insertionSort(arr);
+    //quickSort.QuickSortRun(arr);
     for (size_t i = 0; i < arr.size(); i++) {
         std::cout<<arr[i]<<"\n";
     }

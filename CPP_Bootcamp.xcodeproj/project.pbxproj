@@ -55,6 +55,7 @@
 		612E46882670A9F4000075EB /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		6147805826CEF26400289759 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
 		6147805926CEF26400289759 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
+		6147805B26D029CE00289759 /* InsertionSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
 		6147C01B26BF6F7400993634 /* Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		6147C01C26BF6F7400993634 /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
 		6147C01E26BF748100993634 /* BreadthFirstSearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BreadthFirstSearch.cpp; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 				612E4683266EA1CE000075EB /* MergeSort.hpp */,
 				6147805826CEF26400289759 /* QuickSort.cpp */,
 				6147805926CEF26400289759 /* QuickSort.hpp */,
+				6147805B26D029CE00289759 /* InsertionSort.h */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
