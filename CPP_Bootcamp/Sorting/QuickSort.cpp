@@ -11,10 +11,11 @@
 int QuickSort::partition(std::vector<int>& arr, int low, int high) {
     int mid = (low + high) / 2;
     std::swap(arr[mid], arr[high]);
+    int pivot = arr[high];
     
     int pivotIndex = low;
     for (size_t i = low; i < high; i++) {
-        if (arr[i] <= arr[high]) {
+        if (arr[i] <= pivot) {
             std::swap(arr[i], arr[pivotIndex]);
             pivotIndex++;
         }
