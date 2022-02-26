@@ -10,13 +10,24 @@
 
 #include <exception>
 
-//Custom Exception for when BST is empty.
+//Custom Exception for when Circular Queue is empty.
 class EmptyQueueException : std::exception {
     
 public:
     EmptyQueueException(){};
     const char* what() const noexcept override {
         return "Circular Queue is Empty";
+    }
+    
+};
+
+//Custom Exception for when Circular Queue is Full.
+class FullQueueException : std::exception {
+    
+public:
+    FullQueueException(){};
+    const char* what() const noexcept override {
+        return "Circular Queue is full";
     }
     
 };
@@ -41,9 +52,9 @@ public:
         delete [] arr;
     }
     
-    bool push(const t_Data& value) {
+    void push(const t_Data& value) {
         if (isFull()) {
-            return false;
+            throw FullQueueException{};
         }
         
         if (isEmpty()) {
@@ -55,7 +66,7 @@ public:
             rear = (rear + 1) % size;
             arr[rear] = value;
         }
-        return true;
+        
     }
     
     void pop() {
