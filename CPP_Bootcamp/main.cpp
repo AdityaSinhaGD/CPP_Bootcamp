@@ -28,6 +28,7 @@
 #include "Sorting/QuickSort.hpp"
 #include "Sorting/InsertionSort.h"
 #include "Trees/Trie.h"
+#include "ADT/CircularQueue.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -331,6 +332,7 @@ int main(int argc, const char * argv[]) {
         std::cout<<arr[i]<<"\n";
     }*/
     
+    /*
     Trie* trie = new Trie();
     trie->insert("cats");
     trie->insert("cape");
@@ -338,6 +340,22 @@ int main(int argc, const char * argv[]) {
     std::cout<<trie->wordExists("caps")<<std::endl;
     std::cout<<trie->wordExists("cape")<<std::endl;
     std::cout<<trie->prefixExists("cap")<<std::endl;
+    */
+    
+    CircularQueue<int> cQueue(5);
+    cQueue.push(5);
+    cQueue.push(7);
+    cQueue.push(9);
+    cQueue.push(11);
+    cQueue.push(13);
+    cQueue.push(15);//wont get pushed coz out of size.
+    cQueue.pop();
+    cQueue.push(17);
+    while (!cQueue.isEmpty()) {
+        std::cout<<cQueue.peekFront()<<"\n";
+        cQueue.pop();
+    }
+    
     
     return 0;
 }
