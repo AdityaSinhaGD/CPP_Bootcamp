@@ -29,6 +29,7 @@
 #include "Sorting/InsertionSort.h"
 #include "Trees/Trie.h"
 #include "ADT/CircularQueue.h"
+#include "Trees/AVLTree.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -342,6 +343,7 @@ int main(int argc, const char * argv[]) {
     std::cout<<trie->prefixExists("cap")<<std::endl;
     */
     
+    /*
     CircularQueue<int> cQueue(5);
     cQueue.push(5);
     cQueue.push(7);
@@ -355,6 +357,15 @@ int main(int argc, const char * argv[]) {
         std::cout<<cQueue.peekFront()<<"\n";
         cQueue.pop();
     }
+    */
+    
+    AVLTree<int> avlTree;
+    avlTree.Insert(8);
+    avlTree.Insert(7);
+    avlTree.Insert(6);
+    avlTree.Insert(5);
+    avlTree.Insert(4);
+    avlTree.Preorder();
     
     
     return 0;

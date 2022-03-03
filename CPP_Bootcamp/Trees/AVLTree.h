@@ -1,0 +1,131 @@
+//
+//  AVLTree.h
+//  CPP_Bootcamp
+//
+//  Created by Aditya Sinha on 03/03/22.
+//
+
+#ifndef AVLTree_h
+#define AVLTree_h
+#include <iostream>
+
+template<typename tData>
+class AVLTree {
+    
+private:
+    struct TreeNode{
+        tData val;
+        TreeNode* left;
+        TreeNode* right;
+        int height;
+        TreeNode(const tData& _val) {
+            this->val = _val;
+            left = nullptr;
+            right = nullptr;
+            height = 1;
+        }
+    };
+    
+    TreeNode* root;
+    
+public:
+    AVLTree() {
+        root = nullptr;
+    }
+    
+private:
+    int getHeight(TreeNode* node) {
+        if(node == nullptr) {
+            return 0;
+        }
+        return node->height;
+    }
+    
+    int getBalanceFactor(TreeNode* node) {
+        if(node == nullptr) {
+            return 0;
+        }
+        return getHeight(node->left) - getHeight(node->right);
+    }
+    
+    TreeNode* rightRotate(TreeNode* y) {
+        TreeNode* x = y->left;
+        y->left = x->right;
+        x->right = y;
+        
+        y->height = std::max(getHeight(y->left), getHeight(y->right)) + 1;
+        x->height = std::max(getHeight(x->left), getHeight(x->right)) + 1;
+        
+        return x;
+    }
+    
+    TreeNode* leftRotate(TreeNode* x) {
+        TreeNode* y = x->right;
+        x->right = y->left;
+        y->left = x;
+        
+        x->height = std::max(getHeight(x->left), getHeight(x->right)) + 1;
+        y->height = std::max(getHeight(y->left), getHeight(y->right)) + 1;
+        
+        return y;
+    }
+    
+    TreeNode* InsertInAVLTree(TreeNode* root, const tData& _val) {
+        if(root == nullptr) {
+            return new TreeNode(_val);
+        }
+        
+        if(root->val > _val) {
+            root->left = InsertInAVLTree(root->left, _val);
+        }
+        else if(root->val < _val) {
+            root->right = InsertInAVLTree(root->right, _val);
+        }
+        
+        root->height = std::max(getHeight(root->left), getHeight(root->right)) + 1;
+        int balanceFactor = getBalanceFactor(root);
+        
+        if(balanceFactor > 1 && root->val > _val) {
+            return rightRotate(root);
+        }
+        
+        if(balanceFactor < -1 && root->val < _val) {
+            return leftRotate(root);
+        }
+        
+        if(balanceFactor > 1 && root->left->val < _val) {
+            root->left = leftRotate(root->left);
+            return rightRotate(root);
+        }
+        
+        if(balanceFactor < -1 && root->right->val > _val) {
+            root->right = rightRotate(root->right);
+            return leftRotate(root);
+        }
+        
+        return root;
+        
+    }
+    
+    void PreorderAVL(TreeNode* root) {
+        if(root == nullptr) {
+            return;
+        }
+        std::cout<<root->val<<"\n";
+        PreorderAVL(root->left);
+        PreorderAVL(root->right);
+    }
+    
+public:
+    
+    void Insert(const tData& val) {
+        root = InsertInAVLTree(root, val);
+    }
+    
+    void Preorder() {
+        PreorderAVL(root);
+    }
+    
+};
+
+#endif /* AVLTree_h */

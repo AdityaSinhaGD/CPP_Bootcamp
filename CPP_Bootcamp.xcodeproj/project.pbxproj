@@ -78,6 +78,7 @@
 		6155A1E7269D5A6300FB3574 /* Heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
 		6155A1E8269D5A6300FB3574 /* Heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		615DE35B27CAA68C00059889 /* CircularQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularQueue.h; sourceTree = "<group>"; };
+		615DE35C27D17AF000059889 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
 		61937B55271216FA00D28F71 /* Trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
 		619A8F242681CBEC00C42078 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		619A8F262681D84F00C42078 /* StackLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackLL.h; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				61155A8F268C6E65003D6ABE /* BinarySearchTree.h */,
 				61155A90268C6E86003D6ABE /* Tree.h */,
 				61937B55271216FA00D28F71 /* Trie.h */,
+				615DE35C27D17AF000059889 /* AVLTree.h */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
