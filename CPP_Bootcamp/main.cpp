@@ -30,6 +30,7 @@
 #include "Trees/Trie.h"
 #include "ADT/CircularQueue.h"
 #include "Trees/AVLTree.h"
+#include "ADT/CircularDeque.h"
 
 void Hanoi(int noOfDisks, char TowerSource, char TowerDestination, char TowerAux)
 {
@@ -359,6 +360,7 @@ int main(int argc, const char * argv[]) {
     }
     */
     
+    
     AVLTree<int> avlTree;
     avlTree.Insert(8);
     avlTree.Insert(7);
@@ -366,6 +368,19 @@ int main(int argc, const char * argv[]) {
     avlTree.Insert(5);
     avlTree.Insert(4);
     avlTree.Preorder();
+    
+    
+    /*
+    CircularDeque<int> cDeque(5);
+    cDeque.pushFront(5);
+    cDeque.pushFront(6);
+    cDeque.pushBack(7);
+    cDeque.pushBack(8);
+    cDeque.pushBack(9);
+    cDeque.popFront();
+    cDeque.popFront();
+    cDeque.display();
+    */
     
     
     return 0;

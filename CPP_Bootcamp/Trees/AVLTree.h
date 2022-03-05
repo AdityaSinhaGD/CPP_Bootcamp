@@ -85,11 +85,11 @@ private:
         root->height = std::max(getHeight(root->left), getHeight(root->right)) + 1;
         int balanceFactor = getBalanceFactor(root);
         
-        if(balanceFactor > 1 && root->val > _val) {
+        if(balanceFactor > 1 && root->left->val > _val) {
             return rightRotate(root);
         }
         
-        if(balanceFactor < -1 && root->val < _val) {
+        if(balanceFactor < -1 && root->right->val < _val) {
             return leftRotate(root);
         }
         
@@ -105,6 +105,84 @@ private:
         
         return root;
         
+    }
+    
+    TreeNode* DeleteFromAVL(TreeNode* root, const tData& _val) {
+        
+        if(root == nullptr) {
+            return root;
+        }
+        
+        if(root->val > _val) {
+            root->left = DeleteFromAVL(root->left, _val);
+        }
+        else if(root->val < _val) {
+            root->right = DeleteFromAVL(root->right, _val);
+        }
+        else {
+            if(root->left == nullptr && root->right == nullptr) {
+                delete root;
+                root = nullptr;
+            }
+            else if(root->left == nullptr) {
+                TreeNode* temp = root;
+                root = root->right;
+                delete temp;
+            }
+            else if(root->right == nullptr) {
+                TreeNode* temp = root;
+                root = root->left;
+                delete temp;
+            }
+            else {
+                TreeNode* temp = getMin(root->right);
+                root->val = temp->val;
+                root->right = DeleteFromAVL(root->right, temp->val);
+            }
+        }
+        
+        if(root == nullptr) {
+            return root;
+        }
+        
+        root->height = std::max(getHeight(root->left), getHeight(root->right)) + 1;
+        int balanceFactor = getBalanceFactor(root);
+        
+        //Left-Left rotation
+        if(balanceFactor > 1 && getBalanceFactor(root->left) >= 0) {
+            return rightRotate(root);
+        }
+        
+        //left-right case
+        if(balanceFactor > 1 && getBalanceFactor(root->left) < 0) {
+            root->left = leftRotate(root->left);
+            return rightRotate(root);
+        }
+        
+        //right-right case
+        if(balanceFactor < -1 && getBalanceFactor(root->right) <= 0) {
+            return leftRotate(root->right);
+        }
+        
+        //right-left case
+        if(balanceFactor < -1 && getBalanceFactor(root->right) > 0) {
+            root->right = rightRotate(root->right);
+            return leftRotate(root);
+        }
+        
+        return root;
+        
+    }
+    
+    TreeNode* getMin(TreeNode* root) {
+        TreeNode* current = root;
+        if(current == nullptr) {
+            return current;
+        }
+        while (current->left != nullptr) {
+            current = current->left;
+        }
+        return current;
     }
     
     void PreorderAVL(TreeNode* root) {
